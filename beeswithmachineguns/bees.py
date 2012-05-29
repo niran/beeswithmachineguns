@@ -186,7 +186,7 @@ def _attack(params):
 
         print 'Bee %i is firing his machine gun. Bang bang!' % params['i']
 
-        stdin, stdout, stderr = client.exec_command('ab -r -n %(num_requests)s -c %(concurrent_requests)s -C "sessionid=NotARealSessionID" -H "Accept-Encoding: gzip,deflate" "%(url)s"' % params)
+        stdin, stdout, stderr = client.exec_command('ab -r -n %(num_requests)s -c %(concurrent_requests)s -C "__utma=blargh" -H "Accept-Encoding: gzip,deflate" "%(url)s"' % params)
 
         response = {}
 
